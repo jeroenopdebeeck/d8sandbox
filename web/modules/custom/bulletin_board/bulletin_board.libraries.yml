@@ -1,0 +1,4 @@
+bulletin_board:
+  version: 0
+  js:
+    js/bulletin_board.js: {}

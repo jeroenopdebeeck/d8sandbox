@@ -1,0 +1,12 @@
+name: 'Bulletin board'
+description: 'A bulletin board that allows users to post messages on the site.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+version: 8.x

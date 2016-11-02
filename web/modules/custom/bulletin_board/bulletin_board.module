@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_element_info_alter
+ */
+//@TODO Best practice?
+function bulletin_board_preprocess_page(&$variables) {
+  if (\Drupal::service('path.current')->getPath() == '/bulletin-board') {
+    $variables['#attached']['library'][] = 'bulletin_board/bulletin_board';
+  }
+}
+
+/**
+ * Implements hook_theme
+ */
+function bulletin_board_theme($existing, $type, $theme, $path) {
+  return array('bulletin_board' =>
+    array(
+      'variables' => array(
+        'new_messages' => NULL,
+      ),
+      'template' => 'block--bulletin-board'
+    )
+  );
+}

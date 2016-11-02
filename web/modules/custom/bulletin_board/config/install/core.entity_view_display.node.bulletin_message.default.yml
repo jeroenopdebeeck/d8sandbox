@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bulletin_message.body
+    - node.type.bulletin_message
+  module:
+    - text
+    - user
+id: node.bulletin_message.default
+targetEntityType: node
+bundle: bulletin_message
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
